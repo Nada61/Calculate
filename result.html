@@ -1,0 +1,156 @@
+<html>
+        <head>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="mt-4">Compare Your Rewards</h1>
+        </div>
+        
+        <div class="container">
+                
+                <button id="br" value="brex" >Brex</button>
+                    
+                <button id="st" value="Strip">Strip</button>
+               
+                <button id="am" value="Amex">Amex</button>
+            </div>
+      
+        
+        
+        
+        <div class="container mt-4">
+                <div class="row">
+                    <div class="col-5"><p style="display: inline"></p> business Card</div>
+           
+                    
+            <div class="col-7">
+                <div class="progressbar">
+                      <h5 class="progressCounter"></h5>
+                      <div class="bar">
+                        <div class="progress-bar-fill" ></div>
+                      </div>
+                    </div>
+            </div>
+            </div>
+            </div>
+        
+       
+          <div class="container mt-4">
+                <div class="row">
+            
+                <div class="col-5">Unlimted Rewards</div>
+            <div class="col-7">
+                <div class="unlimtedprogressbar">
+                      <h5 class="progressCounter"></h5>
+                      <div class="bar">
+                        <div class="progress-bar-fill" data-percent="60" data-delay="1" data-bg="purple"></div>
+                      </div>
+                    </div>
+            </div>
+            </div>
+            </div>
+          <div class="container mt-4">
+                <div class="row">
+            
+                <div class="col-5">Lifetime Rewards</div>
+            <div class="col-7">
+                <div class="lifeprogressbar">
+                      <h4 class="progressCounter"></h4>
+                      <div class="bar">
+                          
+                        <div class="progress-bar-fill"></div>
+                      </div>
+                    </div>
+            </div>
+            </div>
+            </div>
+    </body>
+    
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+        <!--<script src="javascript/script.js"></script>-->
+    <script  type="application/javascript">
+     
+        
+        class progressbar{
+            constructor (element , initialvalue = 0){
+                this.valueElem = element.querySelector('.progressCounter');
+                this.fillElem = element.querySelector('.progress-bar-fill');
+                //console.log(this.valueElem);
+                //console.log(this.fillElem);
+                this.setvalue(initialvalue)
+            }
+            
+            setvalue (newvalue){
+                if(newvalue<0){
+                    newvalue=0;
+                }
+
+                if(newvalue>100){
+                    newvalue=100;
+                }
+
+                this.value=newvalue;
+                this.update();
+            }
+        update(){
+            const precentage = this.value + '%';
+            this.fillElem.style.width=precentage;
+            this.valueElem.textContent=precentage;
+        }
+            
+        }
+       
+        
+   // new progressbar(document.querySelector('.progressbar'), localStorage.getItem("resultvalue"))
+    new progressbar(document.querySelector('.lifeprogressbar'), localStorage.getItem("lifetimevalue"))
+    new progressbar(document.querySelector('.unlimtedprogressbar'), localStorage.getItem("unlimtedvalue"))
+        
+       
+    </script>
+    <script>
+        
+    </script>
+    
+     <script>
+         const button=  localStorage.getItem('button');
+         var test = document.querySelector('p').innerHTML = button;
+         
+         if(test == 'Brex'){
+             console.log('brexvalue');
+             new progressbar(document.querySelector('.progressbar'), localStorage.getItem("brexvalue"))
+         }
+         if(test == 'Strip'){
+             console.log('stripvalue');
+             new progressbar(document.querySelector('.progressbar'), localStorage.getItem("stripvalue"))
+         }if(test == 'Amex'){
+             console.log('amexvalue');
+             new progressbar(document.querySelector('.progressbar'), localStorage.getItem("amexvalue"))
+         }
+        
+         
+         
+            let brex = document.getElementById("br");
+            let strip = document.getElementById("st");
+            let amex = document.getElementById("am");
+            let span = document.querySelector('p');
+            brex.addEventListener('click' , ()=>{
+                span.innerHTML = "Brex";
+                    new progressbar(document.querySelector('.progressbar'), localStorage.getItem("brexvalue"))
+
+            });
+            strip.addEventListener('click' , ()=>{
+                span.innerHTML = "Strip";
+                    new progressbar(document.querySelector('.progressbar'), localStorage.getItem("stripvalue"))
+
+            });
+         amex.addEventListener('click' , ()=>{
+                span.innerHTML = "Amex";
+                    new progressbar(document.querySelector('.progressbar'), localStorage.getItem("amexvalue"))
+
+            });
+        
+        </script>
+</html>

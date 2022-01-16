@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+    </head>
+    <body>
+        <div class="container">
+            <form action="result.html">
+            <h1 class="mt-4">Calculate Your Rewards</h1>
+          <div class="container mt-4">
+                <div class="row">
+            
+                <div class="col-5">Vendor/Bills</div>
+            <div class="col-7">
+                <input  type="number" id="vendor" placeholder="Enter a Number"  required value="10" >
+            </div>
+            </div>
+            </div>
+            
+            <div class="container mt-4">
+                <div class="row">
+            
+                <div class="col-5">Media/Ad Spend</div>
+            <div class="col-7">
+                <input id="media" type="number" placeholder="Enter a Number" required value="10">
+            </div>
+            </div>
+            </div>
+            
+            <div class="container mt-4">
+                <div class="row">
+            
+                <div class="col-5">Corb.Spend</div>
+            <div class="col-7">
+                <input id="corb" type="number" placeholder="Enter a Number" required value="20">
+            </div>
+            </div>
+            </div>
+            
+            <div class="container mt-4">
+                <div class="row">
+            
+                <div class="col-5">Team.Project</div>
+            <div class="col-7">
+                <input id="team" type="number" placeholder="Enter a Number" required value="20">
+            </div>
+            </div>
+            </div>
+            
+            <h2 class="mt-4">Compare Your Rewards</h2>
+            <div class="container mt-4">
+                
+                <button type="submit" id="br" value="Brex">Brex</button>
+                    
+                <button type="submit" id="st" value="Strip">Strip</button>
+               
+                <button type="submit" id="am" value="Amex">Amex</button>
+            </div>
+          </form>
+        </div>
+            
+       <!-- <script type="text/jscript">
+            
+          function brex(){
+          var vendor = parseInt(document.getElementById("vendor").value);
+          var sum = vendor * 3;
+        console.log(sum)
+        }
+        
+        </script>-->
+        
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+        <script src="javascript/script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,54 @@
+.container{
+    text-align: center;
+}
+.col-5{
+    text-align: end;
+    color: #A267AC;
+    font-weight: 600;
+    font-size: larger;
+}
+.col-7{
+    text-align: start;
+}
+h1{
+    color: #6867AC;
+}
+h2{
+    margin-top: 23px;
+    color: #6867AC;
+    
+}
+input{
+    text-align: center;
+    border-color: #A267AC;
+   
+}
+button{
+    border-color: #6867AC;
+    width: 8%;
+    height: 10%;
+    background-color: white;
+    font-size: larger;
+    font-weight: 500;
+}
+.bar{
+    height: 15px;
+    background-color: antiquewhite;
+    position: relative;
+    border-radius: 8px;
+}
+.progressbar{
+    width: 60%;
+}
+.lifeprogressbar{
+    width: 60%;
+}
+.unlimtedprogressbar{
+    width: 60%;
+}
+.progress-bar-fill{
+    position: absolute;
+    height: 100%;
+    background-color: blueviolet;
+    border-radius: 8px;
+}
